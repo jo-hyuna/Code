@@ -1,21 +1,26 @@
+# 영화의 종류에 따라
+# 이름 : name, 상영시간 : time, 수익 : money 나타냄
 class movieTheater(object):
     def __init__(self, name, time, money):
         self.name = name
         self.time = time
         self.money = money
 
-
+    # 영화에 따른 상영시간을 사용자에게 보여줌
     def showTime(self):
         print(self.time)
 
+    # 좌석 예매 후 얻은 수익을 영화관 별 수익에 더하여 main() 함수에서 총 수익을 보여줄 수 있도록 함.
     def earnMoney(self, newMoney):
         self.money = self.money + newMoney
 
 
+# 시간대 별로 좌석을 구분하여 좌석 예매하는 기능
 class Seat(object):
     def __init__(self, seat):
         self.seat = seat
 
+    # 좌석을 미리 보여주는 기능
     def showSeat(self):
         print("X는 예매가 완료된 좌석입니다.")
         for i in range(5):
